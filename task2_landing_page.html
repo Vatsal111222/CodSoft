@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; color: #0f172a; background: #ffffff; }
+    .navbar {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      box-shadow: 0 8px 20px rgba(15,23,42,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .brand { font-weight: 900; font-size: 1.3rem; color: #2563eb; }
+    .navbar ul { display: flex; gap: 20px; list-style: none; }
+    .navbar a { text-decoration: none; color: #334155; font-weight: 700; }
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+      padding: 70px 8%;
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+    }
+    .hero h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; margin-bottom: 20px; }
+    .hero p { color: #475569; line-height: 1.8; font-size: 1.1rem; margin-bottom: 28px; }
+    .cta {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 15px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 900;
+    }
+    .visual {
+      min-height: 420px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      box-shadow: 0 22px 60px rgba(37,99,235,0.25);
+      display: grid;
+      place-items: center;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+    .visual h2 { font-size: 2.4rem; margin-bottom: 10px; }
+    section { padding: 80px 8%; }
+    .title { text-align: center; font-size: 2.5rem; margin-bottom: 14px; }
+    .subtitle { text-align: center; color: #64748b; max-width: 720px; margin: 0 auto 42px; line-height: 1.7; }
+    .features, .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .card, .price-card {
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(15,23,42,0.08);
+      border: 1px solid #e2e8f0;
+    }
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+    .card h3, .price-card h3 { margin-bottom: 10px; color: #1e3a8a; }
+    .card p, .price-card p { color: #64748b; line-height: 1.7; }
+    .price { font-size: 2.4rem; font-weight: 900; margin: 18px 0; }
+    .banner {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      border-radius: 26px;
+      padding: 60px 30px;
+    }
+    .banner p { color: #cbd5e1; line-height: 1.7; margin: 16px auto 24px; max-width: 680px; }
+    footer { text-align: center; padding: 28px; background: #f8fafc; color: #64748b; }
+    @media (max-width: 800px) {
+      .navbar ul { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .visual { min-height: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="brand">Landing</div>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Start</a></li>
+      <li><a href="index.html">Tasks</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1>Build Better Digital Experiences</h1>
+      <p>
+        A responsive landing page designed with clean sections, strong spacing, balanced colors,
+        feature cards, pricing blocks, and a clear call-to-action.
+      </p>
+      <a class="cta" href="#features">Explore Features</a>
+    </div>
+    <div class="visual">
+      <div>
+        <h2>Modern Layout</h2>
+        <p>HTML-only page with internal CSS and responsive design.</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="features">
+    <h2 class="title">Features</h2>
+    <p class="subtitle">This section demonstrates columns, cards, alignment, padding, colors, and layout structure.</p>
+    <div class="features">
+      <article class="card">
+        <div class="icon">1</div>
+        <h3>Responsive Design</h3>
+        <p>The layout adjusts smoothly on mobile, tablet, and desktop screen sizes.</p>
+      </article>
+      <article class="card">
+        <div class="icon">2</div>
+        <h3>Clean Sections</h3>
+        <p>Content is divided into hero, features, pricing, call-to-action, and footer sections.</p>
+      </article>
+      <article class="card">
+        <div class="icon">3</div>
+        <h3>Visual Balance</h3>
+        <p>Spacing, shadows, borders, and typography make the page easy to read.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2 class="title">Simple Plans</h2>
+    <p class="subtitle">Pricing cards are included as sample landing page content.</p>
+    <div class="pricing">
+      <article class="price-card">
+        <h3>Starter</h3>
+        <p>Basic landing page features for small projects.</p>
+        <div class="price">Free</div>
+        <a class="cta" href="#contact">Choose</a>
+      </article>
+      <article class="price-card">
+        <h3>Pro</h3>
+        <p>Extra sections, improved layout, and stronger call-to-action design.</p>
+        <div class="price">Demo</div>
+        <a class="cta" href="#contact">Choose</a>
+      </article>
+      <article class="price-card">
+        <h3>Custom</h3>
+        <p>Flexible layout blocks for unique website requirements.</p>
+        <div class="price">Custom</div>
+        <a class="cta" href="#contact">Choose</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="banner">
+      <h2>Ready to Launch?</h2>
+      <p>This call-to-action area encourages visitors to take the next step and improves the landing page flow.</p>
+      <a class="cta" href="index.html">Back to Task Hub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Landing Page Project. All rights reserved.</p>
+  </footer>
+</body>
+</html>
